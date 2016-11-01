@@ -1,0 +1,16 @@
+install.packages("devtools")
+install.packages("base64enc")
+devtools::install_github("lchiffon/wordcloud2")
+
+library(wordcloud2)
+batman = system.file("examples/batman.png",package = "wordcloud2")
+#batman=c("C:\\Users\\Jun\\Documents\\R\\win-library\\3.3\\wordcloud2\\examples")
+wordcloud2(demoFreq,size=1,color="random-dark",figPath=batman)
+help("wordcloud2")
+wordcloud2(demoFreq)
+spiderman = system.file("examples/spiderman.png",package = "wordcloud2")
+wordcloud2(demoFreq,size=1,color="random-dark",figPath=spiderman)
+
+letterCloud(demoFreqC, word = "love", wordSize = 2,color ="random-dark",backgroundColor = "snow")
+wordcloud2(demoFreq, size = 1,shape = 'pentagon')
+as.list(body(wordcloud2))

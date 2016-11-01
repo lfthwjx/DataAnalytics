@@ -1,0 +1,20 @@
+devtools::install_github("Stan125/GREA")
+library(githubinstall)
+githubinstall('GREA')
+library(openxlsx)
+install.packages("openxlsx")
+#¡®urltools¡¯, ¡®haven¡¯, ¡®readODS¡¯, ¡®xml2¡¯, ¡®feather¡¯, ¡®rio¡¯
+install.packages("urltools")
+install.packages("haven")
+install.packages("readODS")
+install.packages("xml2")
+install.packages("feather")
+install.packages("rio")
+library(GREA)
+devtools::install_github("rstudio/addinexamples", type = "source")
+GDP <- rio::import(file = 'C:/Users/Ximing/Desktop/macro uncertainty/GDP.xls', which = 1)
+GDP
+str(GDP)
+GDP<-GDP[c(4:100),2]
+View(GDP)
+str(GDP)

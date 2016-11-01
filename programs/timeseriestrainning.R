@@ -1,0 +1,15 @@
+library(zoo)
+library(xts)
+library(timeSeries)
+install.packages("fGarch")
+help(package="fGarch")
+library(fGarch)
+TimeSeriesData
+str(timeSeries)
+library(timeSeries)
+help(package="timeSeries")
+data(LPP2005REC)
+plot(LPP2005REC, type = "l")
+
+data(USDCHF)
+head(USDCHF)
